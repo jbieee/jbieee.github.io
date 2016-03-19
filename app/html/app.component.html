@@ -1,0 +1,11 @@
+
+<nav id="mainNav">
+    <img id="leftArrow" (click)="leftArrowClick()" class="arrows" alt="Left Arrow" src="app/images/leftArrow.png" />
+    <div><a [routerLink]="['Home']">Home<br><p [class.selected]="'Home' === selectedPage">&#9733;</p></a></div>
+    <div><a [routerLink]="['Education']">Education<br><p [class.selected]="'Education' === selectedPage">&#9733;</p></a></div>
+    <div><a [routerLink]="['Skills']">Skills<br><p [class.selected]="'Skills' === selectedPage">&#9733;</p></a></div>
+    <div><a [routerLink]="['Portfolio']">Portfolio<br><p [class.selected]="'Portfolio' === selectedPage">&#9733;</p></a></div>
+    <img id="rightArrow" (click)="rightArrowClick()" class="arrows" alt="Right Arrow" src="app/images/rightArrow.png" />
+</nav>
+
+<router-outlet></router-outlet>

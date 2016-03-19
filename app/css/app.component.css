@@ -1,0 +1,34 @@
+#mainNav {
+  width: 100vw;
+  height: 8vh;
+  background-color: rgba(210, 119, 139, 0.85);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  #mainNav .arrows {
+    width: 30px;
+    height: 30px;
+    padding: 3px; }
+    #mainNav .arrows:hover {
+      cursor: pointer; }
+  #mainNav #leftArrow {
+    float: left; }
+  #mainNav #rightArrow {
+    float: right; }
+  #mainNav div a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+    font-family: Brandon; }
+    @media (max-width: 375px) {
+      #mainNav div a {
+        font-size: 1em; } }
+    #mainNav div a:hover {
+      color: white; }
+    #mainNav div a p {
+      font-size: .7em;
+      margin: 0;
+      padding: 0; }
+    #mainNav div a .selected {
+      color: yellow; }
