@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  height: 90vh; }
+  height: 90vh;
+  clear: both; }
   .container a {
     text-decoration: none; }
   .container img {
