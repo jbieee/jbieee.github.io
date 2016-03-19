@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .container .content {
+    width: 100vw;
+    background-color: rgba(210, 119, 139, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .container #devry {
+    width: 100vw;
+    height: 92vh; }
+    .container #devry img {
+      width: 100vw;
+      height: 92vh; }
+      @media (max-width: 425px) {
+        .container #devry img {
+          transform: scaleX(2); } }
+  .container #cw {
+    height: 100vh;
+    background-color: white; }
+    .container #cw img {
+      width: 50vw;
+      height: auto; }
+    .container #cw h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif; }

@@ -1,58 +1,46 @@
-<!DOCTYPE html>
 <html>
+  <head>
+    <base href="/">
+    <title>Jordan Boggs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="styles.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAANR3PACoUbQA1SDcAPG1BAEUq/wAoH0kAKTMcAFunawBJf08AfHf/ACcQigAAAAAAAAAAAAAAAAAAAAAARAAEAAAAAABIMDkyuyAAADiXMrqqUgAAOTdhUREVYAAHZiuysiJgAAalUSsVqqYAalG2sbuxGmAqGyIiZisVICq7axUbYitSJRa6sbsbIasLa6sapbUlsAC6EqG7GmsAALpbWxWhsAAAAqGhu7sAAAAAtRpbAAAAAAACu7AAAAA7/wAAEB8AAAAPAAAABwAAgAcAAIADAAAAAQAAAAEAAAAAAAAAAAAAgAEAAMADAADABwAA4A8AAPA/AAD4fwAA" rel="icon" type="image/x-icon" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Jordan Boggs</title>
-</head>
+    <!-- Load open source libraries -->
+    <script src="openSourceJS/jquery.min.js"></script>
+    
+    <!-- Bring in PouchDB -->
+    <script src="//cdn.jsdelivr.net/pouchdb/5.3.0/pouchdb.min.js"></script>
 
-<body>
-  <nav>
-    <a href="#"><img src="" /></a>
-    <ul>
-      <li>
-        <a href="#">About</a>
-        <img src="" />
-      </li>
-      <li>
-        <a href="#">Technologies</a>
-        <img src="" />
-      </li>
-      <li>
-        <a href="#">Projects</a>
-        <img src="" />
-      </li>
-    </ul>
-    <a href="#"><img src="" /></a>
-  </nav>
-  <main>
-    <header>
-      <img src="" />
-      <h1>Jordan Boggs</h1>
-      <h4>Self Doubt Is Our Only Obstacle</h4>
-    </header>
-    <section>
-      <div>
-        <img src="" />
-        <img src="" />
-        <small>Credit</small>
-      </div>
-    </section>
-    <section>
-      <ul>
-        <li>Zoom</li>
-        <li>Draw</li>
-        <li>Download</li>
-        <li>Clear</li>
-      </ul>
-      <canvas></canvas>
-    </section>
-    <footer>
-      <p>
-        Jordan Boggs ©2016
-      </p>
-    </footer>
-  </main>
-</body>
+    <!-- Load Angular libraries -->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
 
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+    <!-- Configure SystemJS -->
+    <script>
+      System.config({
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          }
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+  </head>
+
+  <!-- Display the application -->
+  <body>
+    <jordan-boggs>Loading...</jordan-boggs>
+  </body>
 </html>

@@ -1,0 +1,56 @@
+@import 'variables';
+
+#mainNav {
+    width: 100vw;
+    height: 8vh;
+    background-color: $backing-color;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .arrows {
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #leftArrow {
+        float: left;
+    }
+    #rightArrow {
+        float: right;
+    }
+        
+        
+    div {
+            
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.5em;
+            font-family: Brandon;
+            
+            @media (max-width: 375px) {
+                font-size: 1em;
+            }
+                
+            &:hover {
+                color: white;
+            }
+                
+            p {
+                font-size: .7em;
+                margin: 0;
+                padding: 0;                                     
+            }
+                
+            .selected {
+                    color: yellow;
+            }
+        }            
+    }   
+}
