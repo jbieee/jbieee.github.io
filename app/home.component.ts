@@ -1,7 +1,5 @@
 import {Component} from 'angular2/core';
 
-declare var jQuery:JQueryStatic;
-
 @Component({
     selector: 'home',
     templateUrl: 'app/html/home.component.html',
@@ -9,6 +7,8 @@ declare var jQuery:JQueryStatic;
 })
 
 export class HomeComponent {
+    jQuery:JQueryStatic;
+    
     constructor(){}
        
     scrollPageToVideo() {

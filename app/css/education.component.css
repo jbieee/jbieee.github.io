@@ -9,14 +9,14 @@
     align-items: center;
     justify-content: center; }
   .container #devry {
-    width: 100vw;
-    height: 92vh; }
-    .container #devry img {
-      width: 99vw;
-      height: 92vh; }
-      @media (max-width: 425px) {
-        .container #devry img {
-          transform: scaleX(2); } }
+    width: 100%;
+    height: 92vh;
+    background-image: url("app/images/devryLogo.jpg");
+    background-size: cover;
+    background-position: center; }
+    @media (max-width: 424px) {
+      .container #devry {
+        background-size: 250vw 92vh; } }
   .container #cw {
     height: 100vh;
     background-color: white; }
