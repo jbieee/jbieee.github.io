@@ -20,10 +20,15 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         execute: function() {
             SkillsComponent = (function () {
                 function SkillsComponent() {
+                    this.db = new PouchDB('skillsPage');
                 }
+                SkillsComponent.prototype.ngOnInit = function () {
+                    jQuery('#test').append('<p>' + this.db + '</p>');
+                };
                 SkillsComponent = __decorate([
                     core_1.Component({
-                        template: "\n    <div class=\"animate\">\n        <h2>Skills</h2>\n        <p>\n            I'm currently working with Javascript frameworks Angular2 and Ionic2 for\n            web and mobile application development.\n            \n            I've also recently adapted to using TypeScript along with an appropriate\n            transpiler so that I can write es2015/es6 strongly typed Javascript and \n            still run in all supported browsers.\n        </p>\n    </div>\n    ",
+                        templateUrl: 'app/html/skills.component.html',
+                        styleUrls: ['app/css/skills.component.css'],
                     }), 
                     __metadata('design:paramtypes', [])
                 ], SkillsComponent);

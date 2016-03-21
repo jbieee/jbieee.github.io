@@ -19,9 +19,9 @@
     line-height: 80%;
     font-family: AmericanTypewriter;
     letter-spacing: 2px; }
-    @media (max-width: 374px) {
+    @media (max-width: 425px) {
       #profileHeader h1 {
-        font-size: 5.5em; } }
+        font-size: 4em; } }
     #profileHeader h1 small {
       font-size: .3em;
       line-height: 200%; }

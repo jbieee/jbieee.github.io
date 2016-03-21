@@ -1,21 +1,18 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
+import {Skill} from './skill';
+
+declare var jQuery:JQueryStatic;
 
 @Component({
-    template: `
-    <div class="animate">
-        <h2>Skills</h2>
-        <p>
-            I'm currently working with Javascript frameworks Angular2 and Ionic2 for
-            web and mobile application development.
-            
-            I've also recently adapted to using TypeScript along with an appropriate
-            transpiler so that I can write es2015/es6 strongly typed Javascript and 
-            still run in all supported browsers.
-        </p>
-    </div>
-    `,
+    templateUrl: 'app/html/skills.component.html',
+    styleUrls: ['app/css/skills.component.css'],
 })
 
-export class SkillsComponent {
+export class SkillsComponent implements OnInit{
+    db:PouchDB = new PouchDB('skillsPage');
+    skill:Skill;
     
+    ngOnInit() {        
+        jQuery('#test').append('<p>' + this.db + '</p>');
+    }
 }

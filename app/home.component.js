@@ -19,8 +19,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             HomeComponent = (function () {
-                function HomeComponent(el) {
-                    this.el = el;
+                function HomeComponent() {
                 }
                 HomeComponent.prototype.scrollPageToVideo = function () {
                     jQuery('html, body').animate({
@@ -33,7 +32,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         templateUrl: 'app/html/home.component.html',
                         styleUrls: ['app/css/home.component.css'],
                     }), 
-                    __metadata('design:paramtypes', [core_1.ElementRef])
+                    __metadata('design:paramtypes', [])
                 ], HomeComponent);
                 return HomeComponent;
             }());

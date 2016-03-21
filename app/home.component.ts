@@ -1,4 +1,4 @@
-import {Component, ElementRef} from 'angular2/core';
+import {Component} from 'angular2/core';
 
 declare var jQuery:JQueryStatic;
 
@@ -9,7 +9,7 @@ declare var jQuery:JQueryStatic;
 })
 
 export class HomeComponent {
-    constructor(private el:ElementRef){}
+    constructor(){}
        
     scrollPageToVideo() {
         jQuery('html, body').animate({

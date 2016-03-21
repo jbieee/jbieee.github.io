@@ -7,7 +7,7 @@
     
     .content {
         width: 100vw;
-        background-color: $backing-color;
+        background-color: black;
         display: flex;
         align-items: center;
         justify-content: center;           
@@ -18,7 +18,7 @@
         height: 92vh;
             
         img {
-            width: 100vw;
+            width: 99vw;
             height: 92vh;
             
             @media (max-width: 425px) {
