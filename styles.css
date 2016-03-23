@@ -5,10 +5,6 @@ body {
     background-color: black;
 }
 
-.divider {
-    height: 25vh;
-}
-
 @font-face {
     font-family: AmericanTypewriter;
     src: url(fonts/american_typewriter.woff);
@@ -19,7 +15,7 @@ body {
     src: url(fonts/Brandon_reg.woff);
 }
 
-@keyframes fadeInRight{
+@keyframes fadeInFromBottom{
     0% {
       opacity: 0;
       transform: translate3d(0, 100%, 0);
@@ -35,9 +31,5 @@ body {
     animation-duration: 0.35s;
     transition-timing-function: ease-in;
     animation-fill-mode: both;
-    animation-name: fadeInRight;
-}
-
-.is-exiting {
-    animation-direction: alternate-reverse;
+    animation-name: fadeInFromBottom;
 }

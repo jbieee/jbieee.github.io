@@ -2,7 +2,6 @@ import { Component, OnInit } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from 'angular2/router';
 import {HomeComponent} from './home.component';
 import {EducationComponent} from './education.component';
-import {SkillsComponent} from './skills.component';
 import {PortfolioComponent} from './portfolio.component';
 import {OctodexService} from './octodex.service';
 
@@ -17,11 +16,6 @@ import {OctodexService} from './octodex.service';
         path: '/Education',
         name: 'Education',
         component: EducationComponent
-    },
-    {
-        path: '/Skills',
-        name: 'Skills',
-        component: SkillsComponent
     },
     {
         path: '/Portfolio',
@@ -48,7 +42,7 @@ export class AppComponent implements OnInit{
     selectedPage:String;
     
     constructor(private router:Router){
-        this.routeArray = ['Home', 'Education', 'Skills', 'Portfolio'];
+        this.routeArray = ['Home', 'Education', 'Portfolio'];
         this.selectedPage = this.getCurrentPage();
     }
     
@@ -64,7 +58,7 @@ export class AppComponent implements OnInit{
         let nextPage = this.routeArray.indexOf(currentPage) - 1;
         
         if(nextPage < 0) {
-            nextPage = 3;
+            nextPage = 2;
         }
         
         this.router.navigate([this.routeArray[nextPage]]);
@@ -74,7 +68,7 @@ export class AppComponent implements OnInit{
         
         let nextPage = this.routeArray.indexOf(currentPage) + 1;
         
-        if(nextPage > 3) {
+        if(nextPage > 2) {
             nextPage = 0;
         }
         

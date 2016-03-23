@@ -1,4 +1,4 @@
-System.register(['angular2/core', 'angular2/router', './home.component', './education.component', './skills.component', './portfolio.component', './octodex.service'], function(exports_1, context_1) {
+System.register(['angular2/core', 'angular2/router', './home.component', './education.component', './portfolio.component', './octodex.service'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,7 +10,7 @@ System.register(['angular2/core', 'angular2/router', './home.component', './educ
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, router_1, home_component_1, education_component_1, skills_component_1, portfolio_component_1, octodex_service_1;
+    var core_1, router_1, home_component_1, education_component_1, portfolio_component_1, octodex_service_1;
     var AppComponent;
     return {
         setters:[
@@ -26,9 +26,6 @@ System.register(['angular2/core', 'angular2/router', './home.component', './educ
             function (education_component_1_1) {
                 education_component_1 = education_component_1_1;
             },
-            function (skills_component_1_1) {
-                skills_component_1 = skills_component_1_1;
-            },
             function (portfolio_component_1_1) {
                 portfolio_component_1 = portfolio_component_1_1;
             },
@@ -39,7 +36,7 @@ System.register(['angular2/core', 'angular2/router', './home.component', './educ
             AppComponent = (function () {
                 function AppComponent(router) {
                     this.router = router;
-                    this.routeArray = ['Home', 'Education', 'Skills', 'Portfolio'];
+                    this.routeArray = ['Home', 'Education', 'Portfolio'];
                     this.selectedPage = this.getCurrentPage();
                 }
                 AppComponent.prototype.ngOnInit = function () {
@@ -52,14 +49,14 @@ System.register(['angular2/core', 'angular2/router', './home.component', './educ
                     var currentPage = this.getCurrentPage();
                     var nextPage = this.routeArray.indexOf(currentPage) - 1;
                     if (nextPage < 0) {
-                        nextPage = 3;
+                        nextPage = 2;
                     }
                     this.router.navigate([this.routeArray[nextPage]]);
                 };
                 AppComponent.prototype.rightArrowClick = function () {
                     var currentPage = this.getCurrentPage();
                     var nextPage = this.routeArray.indexOf(currentPage) + 1;
-                    if (nextPage > 3) {
+                    if (nextPage > 2) {
                         nextPage = 0;
                     }
                     this.router.navigate([this.routeArray[nextPage]]);
@@ -81,11 +78,6 @@ System.register(['angular2/core', 'angular2/router', './home.component', './educ
                             path: '/Education',
                             name: 'Education',
                             component: education_component_1.EducationComponent
-                        },
-                        {
-                            path: '/Skills',
-                            name: 'Skills',
-                            component: skills_component_1.SkillsComponent
                         },
                         {
                             path: '/Portfolio',
