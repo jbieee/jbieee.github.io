@@ -3,6 +3,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Router } from 'angula
 import {HomeComponent} from './home.component';
 import {EducationComponent} from './education.component';
 import {PortfolioComponent} from './portfolio.component';
+import {ContactComponent} from './contact.component';
 import {OctodexService} from './octodex.service';
 
 @RouteConfig([
@@ -21,6 +22,11 @@ import {OctodexService} from './octodex.service';
         path: '/Portfolio',
         name: 'Portfolio',
         component: PortfolioComponent
+    },
+    {
+        path: '/Contact',
+        name: 'Contact',
+        component: ContactComponent
     }
 ])
 
@@ -42,7 +48,7 @@ export class AppComponent implements OnInit{
     selectedPage:String;
     
     constructor(private router:Router){
-        this.routeArray = ['Home', 'Education', 'Portfolio'];
+        this.routeArray = ['Home', 'Education', 'Portfolio', 'Contact'];
         this.selectedPage = this.getCurrentPage();
     }
     
@@ -58,7 +64,7 @@ export class AppComponent implements OnInit{
         let nextPage = this.routeArray.indexOf(currentPage) - 1;
         
         if(nextPage < 0) {
-            nextPage = 2;
+            nextPage = 3;
         }
         
         this.router.navigate([this.routeArray[nextPage]]);
@@ -68,7 +74,7 @@ export class AppComponent implements OnInit{
         
         let nextPage = this.routeArray.indexOf(currentPage) + 1;
         
-        if(nextPage > 2) {
+        if(nextPage > 3) {
             nextPage = 0;
         }
         

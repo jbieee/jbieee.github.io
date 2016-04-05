@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+
+h1 {
+  color: white;
+  font-family: Brandon;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+
+input {
+  width: 250px;
+  font-size: 1em;
+  margin: 5px; }
+
+#message {
+  height: 80px; }
+
+#submit {
+  margin-left: 55px;
+  width: 150px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  border: 1px solid white; }
+  #submit:hover {
+    background-color: white;
+    color: black; }
