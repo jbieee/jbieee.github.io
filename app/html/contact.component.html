@@ -1,11 +1,10 @@
 <div class="animate">
     <div class="container">
         <h1>Send me something! I'd love to hear from you 🐼</h1>
-        <form action="////formspree.io/jordan.an.boggs@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Name" required><br>
-            <input type="email" name="_replyto" placeholder="Email" required><br>
-            <input id="message" type="text" name="message" placeholder="Say something!" required><br>
-            <input type="hidden" name="_subject" value="jbieee.github.io" />
+        <form (ngSubmit)="onSubmit()">
+            <input type="text" name="name" placeholder="Name" [(ngModel)]="model.name" required><br>
+            <input type="email" name="email" placeholder="Email" [(ngModel)]="model.email" required><br>
+            <input id="message" type="text" name="message" placeholder="Say something!" [(ngModel)]="model.message" required><br>
             <input id="submit" type="submit" value="Send">
         </form>
     </div>

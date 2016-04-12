@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {ContactForm} from './contactForm.model';
 
 @Component({
     selector: 'contact',
@@ -7,5 +8,19 @@ import {Component} from 'angular2/core';
 })
 
 export class ContactComponent {
-    
+    jQuery: JQueryStatic;
+
+    model = new ContactForm('', '', '');
+
+    onSubmit() {
+        jQuery.ajax({
+            url: "https://formspree.io/jordan.an.boggs@gmail.com",
+            method: "POST",
+            data: { name: this.model.name,
+                    email: this.model.email,
+                    message: this.model.message,
+                    _subject: 'jbieee.github.io' },
+            dataType: "json"
+        });
+    }
 }
