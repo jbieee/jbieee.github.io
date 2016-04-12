@@ -35,6 +35,12 @@ System.register(['angular2/core', './contactForm.model'], function(exports_1, co
                             _subject: 'jbieee.github.io' },
                         dataType: "json"
                     });
+                    this.model = {
+                        name: '',
+                        email: '',
+                        message: ''
+                    };
+                    document.getElementById('header').innerHTML = 'Thank You! 😀';
                 };
                 ContactComponent = __decorate([
                     core_1.Component({

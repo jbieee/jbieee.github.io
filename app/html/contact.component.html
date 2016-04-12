@@ -1,6 +1,6 @@
 <div class="animate">
     <div class="container">
-        <h1>Send me something! I'd love to hear from you 🐼</h1>
+        <h1 id="header">Send me something! I'd love to hear from you 🐼</h1>
         <form (ngSubmit)="onSubmit()">
             <input type="text" name="name" placeholder="Name" [(ngModel)]="model.name" required><br>
             <input type="email" name="email" placeholder="Email" [(ngModel)]="model.email" required><br>

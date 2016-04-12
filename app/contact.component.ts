@@ -22,5 +22,13 @@ export class ContactComponent {
                     _subject: 'jbieee.github.io' },
             dataType: "json"
         });
+        
+        this.model = {
+            name: '',
+            email: '',
+            message: ''
+        };
+        
+        document.getElementById('header').innerHTML = 'Thank You! 😀'
     }
 }
