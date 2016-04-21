@@ -4,7 +4,7 @@
         <form (ngSubmit)="onSubmit()">
             <input type="text" name="name" placeholder="Name" [(ngModel)]="model.name" required><br>
             <input type="email" name="email" placeholder="Email" [(ngModel)]="model.email" required><br>
-            <input id="message" type="text" name="message" placeholder="Say something!" [(ngModel)]="model.message" required><br>
+            <textarea id="message" name="message" placeholder="Say something!" [(ngModel)]="model.message" required></textarea><br>
             <input id="submit" type="submit" value="Send">
         </form>
     </div>
